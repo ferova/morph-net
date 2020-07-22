@@ -1,3 +1,4 @@
+
 """
 MorphNet Model Zoo
 
@@ -9,7 +10,8 @@ Implementation of MorphNetModel class.
 """
 
 import os
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from datetime import datetime
 from morph_net.network_regularizers import flop_regularizer, latency_regularizer, model_size_regularizer
 from morph_net.tools import structure_exporter
