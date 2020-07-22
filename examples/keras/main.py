@@ -9,7 +9,8 @@ Main script to start MorphNet training for selected models.
 """
 
 import argparse
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 from model import MorphNetModel
 from utils import set_reproducible_environment, select_keras_base_model, train_epoch, validate_epoch
